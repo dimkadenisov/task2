@@ -1,0 +1,372 @@
+$total-black: #000000
+$black: #333333
+$gray: #858585
+$lightgray: #F0F0F0
+$cardBG: #F7F7F7 
+$yellow: #FFD93E
+$white: #ffffff
+    
+html, body
+    margin: 0
+    padding: 0
+    font-size: 10px
+    font-family: Arial, Helvetica, sans-serif
+
+a
+    text-decoration: none
+    cursor: pointer
+
+.h1
+    color: $black
+    font-size: 2.7rem
+    line-height: 3.1rem
+    padding-top: 26px
+    padding-bottom: 0 
+    padding-left: 25px
+    margin: 0
+
+.h2
+    color: $black
+    font-size: 1.8rem
+    line-height: 2.1rem
+    padding-top: 29px
+    padding-bottom: 0
+    margin: 0
+
+.p
+    color: $black  
+    font-size: 1.4rem
+    line-height: 1.6rem
+    padding-top: 6px
+    padding-bottom: 0
+    padding-left: 25px
+    margin: 0
+
+%header-footer-pre-options
+    padding-left: 40px
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: nowrap
+    box-sizing: border-box
+    width: 100%
+    
+.root
+    width: 100vw
+    height: 100vh
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 92px auto auto 64px
+
+.header
+    @extend %header-footer-pre-options
+    grid-column: 1 / -1
+    position: sticky
+    height: 92px
+    border-bottom: 1px solid $lightgray
+
+    &__menu
+        display: flex
+        flex-direction: row
+
+    &__link
+        font-size: 1.6rem
+        font-weight: bold
+        line-height: 2rem
+        color: $black
+        opacity: .6
+
+        &_active
+            opacity: 1
+
+        &:nth-child(1)
+            margin-left: 52px
+            margin-right: 28px
+
+        &:nth-child(2)
+            margin-right: 26px
+
+.main
+    grid-column: 1 / 2
+    margin-left: 40px
+
+    &__content
+        margin-top: 20px
+        background-image: url(../img/bg@2x.png)
+        background-repeat: no-repeat
+        background-position: center
+        border-radius: 20px
+        background-size: cover
+        display: flex
+        justify-content: space-between
+        height: 331px //потом убрать
+        width: 630px //потом убрать
+
+    &__cards
+        padding-right: 20px
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        overflow-y: auto
+        height: auto
+        -webkit-overflow-scrolling: touch
+
+        &::-webkit-scrollbar
+            display: none
+
+    &__card
+        flex: 0 0 auto
+        height: 120px
+
+        &:first-child
+            margin-top: 20px
+
+        &:last-child
+            margin-bottom: 20px
+
+.temp
+    display: inline-block
+    padding-left: 25px
+
+    &__category
+        font-size: 1.4rem
+        line-height: 1.6rem
+        color: $gray
+        padding-top: 25px
+        margin: 0
+
+    &__number
+        font-size: 3.6rem
+        font-weight: bold
+        line-height: 4.2rem
+        color: $black
+        padding-top: 0
+        margin: 0
+
+    &__icon
+        width: 26px
+        height: 26px
+        margin-left: -8px
+
+.card
+    width: 200px
+    box-sizing: border-box
+    background-color: $cardBG
+    border-radius: 20px
+    padding: 14px
+    margin-top: 15px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &__icon
+        align-self: flex-start
+
+    &__h3
+        color: $black
+        font-size: 1.4rem
+        line-height: 1.6rem
+        padding: 0
+        margin: 0
+
+    &__p
+        color: $gray
+        font-size: 1.2rem
+        line-height: 1.4rem
+        padding-top: 3px
+        margin: 0
+
+    &:hover
+        background-color: $white
+        box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)
+
+.favorite-scripts
+    grid-column: 2 / -1
+    width: 635px
+
+    &__cards
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        margin-top: 5px
+        height: 331px
+        width: 635px
+        margin-left: 26px
+        margin-right: 40px
+        overflow-y: scroll
+        -webkit-overflow-scrolling: touch
+        scroll-behavior: smooth
+
+        &::-webkit-scrollbar
+            display: none
+
+    &__card
+        margin-right: 15px
+        height: 100px
+
+        &:nth-child(1)
+            margin-left: 3px
+
+        &:nth-child(2)
+            margin-left: 3px
+
+
+.favorite-devices
+    grid-column: 1/ -1
+
+    &__cards
+        width: 100vw
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        overflow-x: auto
+        height: 140px
+        -webkit-overflow-scrolling: touch
+        scroll-behavior: smooth
+
+        &::-webkit-scrollbar
+            display: none
+
+    &__card
+        height: 120px
+        flex: 0 0 auto
+        margin-right: 15px
+
+        &:first-child
+            margin-left: 40px
+
+        &:last-child
+            margin-right: 40px
+
+    &__filter
+        padding: 0 0 0 8px
+
+.arrows
+    display: flex
+    flex-wrap: nowrap
+
+    &_hidden
+        visibility: hidden
+
+.arrow
+    width: 8px
+    height: 14px
+    opacity: .3
+    margin: 0 10px
+
+    &:active
+        opacity: 1
+        fill: $black
+    
+    &:last-child
+        margin-right: 4px
+
+.full-width-wrapper
+    display: flex
+    align-items: baseline
+
+.between-wrapper
+    margin-left: 28px
+    width: 630px
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    flex-wrap: nowrap
+
+.between-wrapper_margin_on
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    flex-wrap: nowrap
+    margin: 0 40px
+
+.filter
+    list-style: none
+    display: flex
+    flex-direction: row
+    padding: 0
+
+    &__category
+        color: $total-black
+        font-size: 1.3rem
+        line-height: 1.5rem
+        font-weight: bold
+        padding: 7px 15px 8px 15px
+        margin: 0 5px
+        background-color: $cardBG
+        border-radius: 20px
+
+        &_active
+            background-color: $yellow
+
+.footer
+    @extend %header-footer-pre-options
+    grid-column: 1 / -1
+    justify-content: space-between
+    height: 64px
+
+    &__menu
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+    
+    &__link
+        font-size: 1.2rem
+        color: $gray
+        margin: 0 7px
+
+        &:nth-child(1)
+            margin-left: 0
+
+    &__copyright
+        font-size: 1.2rem
+        color: $gray
+        margin-right: 36px
+
+.popup
+    width: 630px
+    border-radius: 20px
+    margin: auto
+    background-color: $white
+    padding: 25px
+
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+
+    &__wrap
+        width: 100vw
+        height: 100vh
+        background-color: rgba(51,51,51,0.50)
+
+    &__h1
+        padding: 0
+        margin: 0
+
+.pq
+    height: 41px
+    width: 41px
+    padding: 0
+    margin: 0
+
+.cont
+    display: flex
+    flex-direction: row
+
+.range
+    -webkit-appearance: none  /* Override default CSS styles */
+    appearance: none
+    width: 100% /* Full-width */
+    height: 60px /* Specified height */
+    background: linear-gradient(-90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%)
+    outline: none
+    border-radius: 30px
+
+.range::-webkit-slider-thumb 
+    -webkit-appearance: none /* Override default look */
+    appearance: none
+    width: 68px /* Set a specific slider handle width */
+    height: 68px /* Slider handle height */
+    background-image: url("../icons/circle.svg")
+    cursor: pointer /* Cursor on hover */
