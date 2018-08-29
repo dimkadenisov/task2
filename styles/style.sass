@@ -1,10 +1,4 @@
-$total-black: #000000
-$black: #333333
-$gray: #858585
-$lightgray: #F0F0F0
-$cardBG: #F7F7F7 
-$yellow: #FFD93E
-$white: #ffffff
+@import "variables.sass"
     
 html, body
     margin: 0
@@ -284,9 +278,16 @@ a
     list-style: none
     display: flex
     flex-direction: row
+    flex-wrap: nowrap
+    overflow-x: auto
     padding: 0
+    -webkit-overflow-scrolling: touch
+
+    &::-webkit-scrollbar
+        display: none
 
     &__category
+        flex: 0 0 auto
         color: $total-black
         font-size: 1.3rem
         line-height: 1.5rem
@@ -296,8 +297,11 @@ a
         background-color: $cardBG
         border-radius: 20px
 
-        &_active
-            background-color: $yellow
+input[type="checkbox"]
+  display: none
+
+input[type="checkbox"]:checked + label
+  background-color: $yellow
 
 .footer
     @extend %header-footer-pre-options
@@ -322,51 +326,3 @@ a
         font-size: 1.2rem
         color: $gray
         margin-right: 36px
-
-.popup
-    width: 630px
-    border-radius: 20px
-    margin: auto
-    background-color: $white
-    padding: 25px
-
-    &__container
-        display: flex
-        justify-content: space-between
-        align-items: baseline
-
-    &__wrap
-        width: 100vw
-        height: 100vh
-        background-color: rgba(51,51,51,0.50)
-
-    &__h1
-        padding: 0
-        margin: 0
-
-.pq
-    height: 41px
-    width: 41px
-    padding: 0
-    margin: 0
-
-.cont
-    display: flex
-    flex-direction: row
-
-.range
-    -webkit-appearance: none  /* Override default CSS styles */
-    appearance: none
-    width: 100% /* Full-width */
-    height: 60px /* Specified height */
-    background: linear-gradient(-90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%)
-    outline: none
-    border-radius: 30px
-
-.range::-webkit-slider-thumb 
-    -webkit-appearance: none /* Override default look */
-    appearance: none
-    width: 68px /* Set a specific slider handle width */
-    height: 68px /* Slider handle height */
-    background-image: url("../icons/circle.svg")
-    cursor: pointer /* Cursor on hover */

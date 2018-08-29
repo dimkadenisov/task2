@@ -5,27 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-  <div class="popup__wrap">
-    <div class="popup">
-      <div class="popup__container">
-        <h1 class="h1 poppup__h1">Elgato Eve Degree Connected</h1>
-        <div class="cont">
-          <p class="temp__number">+19</p><img class="pq temp__icon" src="../icons/icon_temperature_2@2x.png" alt="">
+  <div class="popup">
+    <div class="popup__container">
+      <div class="popup__wrap">
+        <div class="popup__body">
+          <h1 class="h1 popup__h1">Elgato Eve Degree Connected</h1>
+          <div class="cont">
+            <p id="temp" class="temp__number">+10</p><img class="temp__icon popup__icon" src="../icons/icon_temperature_2@2x.png" alt="">
+          </div>
+        </div>
+        <p class="p popup__p">Включено</p>
+        <div class="filter popup__filter">
+            <input type="checkbox" name="все" value="все" id="все" checked />
+            <label class="filter__category popup__category" for="все">Все</label>
+            <input type="checkbox" name="Кухня" value="Кухня" id="Кухня" />
+            <label class="filter__category popup__category" for="Кухня">Кухня</label>
+            <input type="checkbox" name="Зал" value="Зал" id="Зал" />
+            <label class="filter__category popup__category" for="Зал">Зал</label>
+            <input type="checkbox" name="Лампочки" value="Лампочки" id="Лампочки" />
+            <label class="filter__category popup__category" for="Лампочки">Лампочки</label>
+            <input type="checkbox" name="Камеры" value="Камеры" id="Камеры" />
+            <label class="filter__category popup__category" for="Камеры">Камеры</label>
+        </div>
+        <div class="popup__qqq">
+          <span class="popup__pre">-10</span>
+          <input id="range" class="range" type="range" min="-10" max="30" value="+10">
+          <span class="popup__post" >+30</span>
         </div>
       </div>
-      <p class="p popup__p">Двери и окна закрыты, сигнализация включена.</p>
-      <ul class="filter popup__filter">
-          <li class="filter__category popup__category filter__category_active">Все</li>
-          <li class="filter__category popup__category">Кухня</li>
-          <li class="filter__category popup__category">Зал</li>
-          <li class="filter__category popup__category">Лампочки</li>
-          <li class="filter__category popup__category">Камеры</li>
-      </ul>
-      <input class="range" type="range" min="10" max="30" value="20">
+      <div class="popup__buttons">
+        <button class="button button_primary popup__button">Применить</button>
+        <button class="button popup__button">Закрыть</button>
+      </div>
     </div>
   </div>
+  <script src="../js/slider.js" defer></script>
 </body>
 </html>
