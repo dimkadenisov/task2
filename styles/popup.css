@@ -14,9 +14,22 @@
 }
 
 .popup__container {
-  -ms-flex-preferred-size: 630px;
-      flex-basis: 630px;
-  padding: 20px;
+  margin: 20px;
+  max-width: 630px;
+  min-width: 100px;
+}
+
+.popup__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 25px 0;
 }
 
 .popup__body {
@@ -29,13 +42,8 @@
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-}
-
-.popup__wrap {
-  max-width: 580px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .popup__h1 {
@@ -51,10 +59,11 @@
 }
 
 .popup__p {
-  padding-left: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.popup .cont {
+.popup__cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,9 +71,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  padding-left: 20px;
 }
 
-.popup__qqq {
+.popup__range-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +90,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .popup__pre {
@@ -128,7 +145,9 @@
   appearance: none;
   width: 68px;
   height: 68px;
-  background-image: url("../icons/circle.svg");
+  background: radial-gradient(circle closest-side, transparent 80%, rgba(51, 51, 51, 0.1) 80%, rgba(51, 51, 51, 0.1) 90%, white 90%, white 100%);
+  border-radius: 50%;
+  border: none;
   cursor: pointer;
 }
 
@@ -169,5 +188,13 @@
 
 .popup__filter {
   margin: 20px 0 25px 0;
+}
+
+.popup__filter__category {
+  display: inline;
+}
+
+label.popup__category:first-of-type {
+  margin-left: 25px;
 }
 /*# sourceMappingURL=popup.css.map */

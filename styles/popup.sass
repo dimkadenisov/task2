@@ -9,19 +9,23 @@
   background-color: rgba(51,51,51,0.50)
 
   &__container
-    flex-basis: 630px
-    padding: 20px
+    margin: 20px
+    max-width: 630px
+    min-width: 100px
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    border-radius: 20px
+    background-color: $white
+    padding: 25px 0
 
   &__body
     display: flex
     justify-content: space-between
     align-items: baseline
-
-  &__wrap
-    max-width: 580px
-    border-radius: 20px
-    background-color: $white
-    padding: 25px
+    padding-left: 25px
+    padding-right: 25px
 
   &__h1
     padding: 0
@@ -34,16 +38,22 @@
     margin: 0
 
   &__p
-    padding-left: 0
+    padding-left: 25px
+    padding-right: 25px
 
-  .cont
+  &__cont
     display: flex
     flex-direction: row
+    justify-content: flex-end
+    flex-basis: 100px
+    padding-left: 20px
 
-  &__qqq
+  &__range-container
     display: flex
     flex-direction: row
     align-items: center
+    padding-left: 25px
+    padding-right: 25px
 
   &__pre
     width: 0
@@ -85,7 +95,10 @@
     appearance: none
     width: 68px 
     height: 68px
-    background-image: url("../icons/circle.svg")
+    // background-image: url("../icons/circle.png")
+    background: radial-gradient(circle closest-side, transparent 80%, rgba(51, 51, 51, 0.1) 80%, rgba(51, 51, 51, 0.1) 90%, white 90%, white 100%)
+    border-radius: 50%
+    border: none
     cursor: pointer
 
 .button
@@ -119,3 +132,10 @@
 
 .popup__filter
   margin: 20px 0 25px 0
+
+  &__category
+    display: inline
+
+label.popup__category:first-of-type
+  margin-left: 25px
+  
