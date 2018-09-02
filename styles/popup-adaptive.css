@@ -1,6 +1,10 @@
 @media (max-width: 500px) {
+  .popup {
+    height: 100%;
+  }
   .popup__wrap {
-    padding: 20px 0;
+    padding: 20px 0 25px;
+    max-width: 370px;
   }
   .popup__h1 {
     font-size: 1.8rem;
@@ -19,7 +23,8 @@
   .popup__range-container {
     padding: 0;
     margin: 25px 0;
-    height: 230px;
+    height: 290px;
+    width: 100%;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }

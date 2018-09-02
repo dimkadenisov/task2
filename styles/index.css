@@ -490,11 +490,14 @@ input[type="checkbox"]:checked + label {
           align-items: center;
   width: 100vw;
   height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: rgba(51, 51, 51, 0.5);
+  padding: 20px 0;
 }
 
 .popup__container {
-  margin: 20px;
+  margin: 0 20px;
   max-width: 630px;
   min-width: 100px;
 }
@@ -679,8 +682,12 @@ label.popup__category:first-of-type {
 }
 
 @media (max-width: 500px) {
+  .popup {
+    height: 100%;
+  }
   .popup__wrap {
-    padding: 20px 0;
+    padding: 20px 0 25px;
+    max-width: 370px;
   }
   .popup__h1 {
     font-size: 1.8rem;
@@ -699,7 +706,8 @@ label.popup__category:first-of-type {
   .popup__range-container {
     padding: 0;
     margin: 25px 0;
-    height: 230px;
+    height: 290px;
+    width: 100%;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }

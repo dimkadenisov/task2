@@ -10,11 +10,14 @@
           align-items: center;
   width: 100vw;
   height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: rgba(51, 51, 51, 0.5);
+  padding: 20px 0;
 }
 
 .popup__container {
-  margin: 20px;
+  margin: 0 20px;
   max-width: 630px;
   min-width: 100px;
 }
