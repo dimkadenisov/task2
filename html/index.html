@@ -269,6 +269,51 @@
             <p class="footer__copyright">© 2001–2017  ООО «Яндекс»</p>
         </footer>
     </div>
+    <div class="popup hide">
+        <div class="popup__container">
+          <div class="popup__wrap">
+            <div class="popup__body">
+              <h1 class="h1 popup__h1">Elgato Eve Degree Connected</h1>
+              <div class="popup__cont">
+                <p id="temp" class="temp__number">+10</p><img class="temp__icon popup__icon" src="../icons/icon_temperature_2@2x.png" alt="">
+              </div>
+            </div>
+            <p class="p popup__p">Включено</p>
+            <div class="filter popup__filter">
+                <input type="checkbox" name="все" value="все" id="все" checked />
+                <label class="filter__category popup__category" for="все">Все</label>
+                <input type="checkbox" name="Кухня" value="Кухня" id="Кухня" />
+                <label class="filter__category popup__category" for="Кухня">Кухня</label>
+                <input type="checkbox" name="Зал" value="Зал" id="Зал" />
+                <label class="filter__category popup__category" for="Зал">Зал</label>
+                <input type="checkbox" name="Лампочки" value="Лампочки" id="Лампочки" />
+                <label class="filter__category popup__category" for="Лампочки">Лампочки</label>
+                <input type="checkbox" name="Камеры" value="Камеры" id="Камеры" />
+                <label class="filter__category popup__category" for="Камеры">Камеры</label>
+                
+                <input type="checkbox" name="1" value="1" id="1" checked />
+                <label class="filter__category popup__category" for="1">qwqweq</label>
+                <input type="checkbox" name="2" value="2" id="2" />
+                <label class="filter__category popup__category" for="2">1qwseqw</label>
+                <input type="checkbox" name="3" value="3" id="3" />
+                <label class="filter__category popup__category" for="3">qwdqwdas</label>
+                <input type="checkbox" name="4" value="4" id="4" />
+                <label class="filter__category popup__category" for="4">sdva</label>
+                <input type="checkbox" name="5" value="5" id="5" />
+                <label class="filter__category popup__category" for="5">dfs</label>
+            </div>
+            <div class="popup__range-container">
+              <span class="popup__pre">-10</span>
+              <input id="range" class="range popup__range" type="range" min="-10" max="30" value="+10">
+              <span class="popup__post" >+30</span>
+            </div>
+          </div>
+          <div class="popup__buttons">
+            <button class="button button_primary popup__button">Применить</button>
+            <button class="button popup__button" id="close">Закрыть</button>
+          </div>
+        </div>
+      </div>
     <script src="../js/script.js" defer></script>
 </body>
 </html>

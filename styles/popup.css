@@ -1,4 +1,8 @@
 .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,5 +203,10 @@
 
 label.popup__category:first-of-type {
   margin-left: 25px;
+}
+
+.hide, .hide * {
+  display: none;
+  position: absolute;
 }
 /*# sourceMappingURL=popup.css.map */

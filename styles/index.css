@@ -479,6 +479,10 @@ input[type="checkbox"]:checked + label {
 }
 
 .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,6 +683,11 @@ input[type="checkbox"]:checked + label {
 
 label.popup__category:first-of-type {
   margin-left: 25px;
+}
+
+.hide, .hide * {
+  display: none;
+  position: absolute;
 }
 
 @media (max-width: 500px) {
