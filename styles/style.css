@@ -71,9 +71,6 @@ a {
 
 .header {
   grid-column: 1 / -1;
-  position: -webkit-sticky;
-  position: sticky;
-  height: 92px;
   border-bottom: 1px solid #F0F0F0;
 }
 
@@ -128,7 +125,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 331px;
+  max-height: 331px;
   width: 630px;
 }
 
@@ -289,7 +286,6 @@ input[type="checkbox"]:checked + label {
 
 .favorite-scripts {
   grid-column: 2 / -1;
-  width: 635px;
 }
 
 .favorite-scripts__cards {
@@ -304,8 +300,8 @@ input[type="checkbox"]:checked + label {
       flex-wrap: wrap;
   margin-top: 5px;
   height: 331px;
-  width: 635px;
-  margin-left: 26px;
+  width: 640px;
+  margin-left: 21px;
   margin-right: 40px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -321,12 +317,12 @@ input[type="checkbox"]:checked + label {
   height: 100px;
 }
 
-.favorite-scripts__card:nth-child(1) {
-  margin-left: 3px;
+.favorite-scripts__card:nth-child(1), .favorite-scripts__card:nth-child(2) {
+  margin-left: 5px;
 }
 
-.favorite-scripts__card:nth-child(2) {
-  margin-left: 3px;
+.favorite-scripts__card:last-child {
+  margin-right: 10px;
 }
 
 .favorite-devices {
@@ -412,7 +408,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .between-wrapper {
-  margin-left: 28px;
+  margin-left: 26px;
   width: 630px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,7 +443,6 @@ input[type="checkbox"]:checked + label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 64px;
 }
 
 .footer__menu {

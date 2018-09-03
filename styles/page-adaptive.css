@@ -1,0 +1,89 @@
+@media (max-width: 425px) {
+  .root {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 55px auto auto auto 200px;
+        grid-template-rows: 55px auto auto auto 200px;
+  }
+  .main, .favorite-scripts, .favorite-devices {
+    grid-column: 1 / -1;
+  }
+  .header {
+    border-bottom: none;
+    padding-left: 20px;
+  }
+  .main {
+    margin: 0 20px;
+  }
+  .main__h2 {
+    display: none;
+  }
+  .main__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+    height: 282px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .main__h1 {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    padding-top: 21px;
+  }
+  .main__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-x: auto;
+  }
+  .main__card {
+    margin-left: 20px;
+  }
+  .main__card:first-child {
+    margin-top: 15px;
+  }
+  .main__card:last-child {
+    margin-bottom: 20px;
+  }
+  .temp__icon {
+    width: 18px;
+    height: 18px;
+    padding-left: 5px;
+  }
+  .temp__number {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+  .footer {
+    padding: 0 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__link {
+    margin: 0;
+    text-align: center;
+  }
+  .footer__copyright {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=page-adaptive.css.map */
