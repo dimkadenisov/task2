@@ -217,10 +217,10 @@ input[type="checkbox"]:checked + label
         flex-direction: column
         flex-wrap: wrap
         height: 331px
-        width: 640px
+        max-width: 640px
         margin-top: 5px
         margin-left: 21px
-        margin-right: 40px
+        // margin-right: 40px
         overflow-y: scroll
         -webkit-overflow-scrolling: touch
         scroll-behavior: smooth
@@ -244,9 +244,6 @@ input[type="checkbox"]:checked + label
 
 .favorite-devices
     grid-column: 1/ -1
-
-    &__h2
-        padding-top: 0
 
     &__cards
         width: 100vw
@@ -302,7 +299,8 @@ input[type="checkbox"]:checked + label
 
 .between-wrapper
     margin-left: 26px
-    width: 630px
+    margin-right: 40px
+    max-width: 630px
     display: flex
     justify-content: space-between
     align-items: baseline
