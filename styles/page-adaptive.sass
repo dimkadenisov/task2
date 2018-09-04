@@ -52,9 +52,38 @@
       font-size: 2.4rem
       line-height: 2.8rem
 
+  .favorite-scripts
 
+    &__cards
+      width: 100vw
+      height: auto
+      margin-left: 0
+      display: block
+      overflow-x: scroll
+      overflow-y: hidden
+      white-space: nowrap
 
+    &__card
+      display: inline-block
 
+      &:first-child
+        margin-left: 20px
+
+      &:last-child
+        margin-right: 20px
+
+  .favorite-devices
+
+    &__card
+
+      &:first-child
+          margin-left: 20px
+
+      &:last-child
+          margin-right: 20px
+
+  .between-wrapper_margin_on
+    margin: 0 20px
 
   .footer
     padding: 0 20px

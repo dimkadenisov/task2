@@ -153,7 +153,6 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  height: 120px;
 }
 
 .main__card:first-child {
@@ -162,6 +161,10 @@ a {
 
 .main__card:last-child {
   margin-bottom: 20px;
+}
+
+.main__wrapper {
+  height: 120px;
 }
 
 .temp {
@@ -193,13 +196,16 @@ a {
 }
 
 .card {
+  margin-top: 15px;
+}
+
+.card__wrapper {
   width: 200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #F7F7F7;
   border-radius: 20px;
   padding: 14px;
-  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,6 +216,12 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.card__wrapper:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
 }
 
 .card__icon {
@@ -231,12 +243,6 @@ a {
   line-height: 1.4rem;
   padding-top: 3px;
   margin: 0;
-}
-
-.card:hover {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
-          box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
 }
 
 .filter {
@@ -298,9 +304,9 @@ input[type="checkbox"]:checked + label {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 5px;
   height: 331px;
   width: 640px;
+  margin-top: 5px;
   margin-left: 21px;
   margin-right: 40px;
   overflow-y: scroll;
@@ -313,8 +319,10 @@ input[type="checkbox"]:checked + label {
 }
 
 .favorite-scripts__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin-right: 15px;
-  height: 100px;
 }
 
 .favorite-scripts__card:nth-child(1), .favorite-scripts__card:nth-child(2) {
@@ -325,22 +333,19 @@ input[type="checkbox"]:checked + label {
   margin-right: 10px;
 }
 
+.favorite-scripts__wrapper {
+  height: 100px;
+}
+
 .favorite-devices {
   grid-column: 1/ -1;
 }
 
 .favorite-devices__cards {
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
   height: 140px;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
@@ -351,10 +356,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .favorite-devices__card {
-  height: 120px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  display: inline-block;
   margin-right: 15px;
 }
 
@@ -364,6 +366,10 @@ input[type="checkbox"]:checked + label {
 
 .favorite-devices__card:last-child {
   margin-right: 40px;
+}
+
+.favorite-devices__wrapper {
+  height: 120px;
 }
 
 .favorite-devices__filter {
@@ -802,6 +808,33 @@ label.popup__category:first-of-type {
   .temp__number {
     font-size: 2.4rem;
     line-height: 2.8rem;
+  }
+  .favorite-scripts__cards {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .favorite-scripts__card {
+    display: inline-block;
+  }
+  .favorite-scripts__card:first-child {
+    margin-left: 20px;
+  }
+  .favorite-scripts__card:last-child {
+    margin-right: 20px;
+  }
+  .favorite-devices__card:first-child {
+    margin-left: 20px;
+  }
+  .favorite-devices__card:last-child {
+    margin-right: 20px;
+  }
+  .between-wrapper_margin_on {
+    margin: 0 20px;
   }
   .footer {
     padding: 0 20px;
