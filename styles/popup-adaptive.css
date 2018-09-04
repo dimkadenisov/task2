@@ -1,6 +1,10 @@
 @media (max-width: 500px) {
   .popup {
-    height: 100%;
+    padding: 20px;
+    height: auto;
+  }
+  .popup__container {
+    margin: 0;
   }
   .popup__wrap {
     padding: 20px 0 25px;

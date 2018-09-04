@@ -83,6 +83,9 @@
   .favorite-devices__card:last-child {
     margin-right: 20px;
   }
+  .between-wrapper {
+    margin: 0 20px;
+  }
   .between-wrapper_margin_on {
     margin: 0 20px;
   }

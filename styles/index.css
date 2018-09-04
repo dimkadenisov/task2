@@ -24,7 +24,7 @@ a {
   color: #333333;
   font-size: 1.8rem;
   line-height: 2.1rem;
-  padding-top: 29px;
+  padding-top: 30px;
   padding-bottom: 0;
   margin: 0;
 }
@@ -339,6 +339,10 @@ input[type="checkbox"]:checked + label {
 
 .favorite-devices {
   grid-column: 1/ -1;
+}
+
+.favorite-devices__h2 {
+  padding-top: 0;
 }
 
 .favorite-devices__cards {
@@ -693,7 +697,11 @@ label.popup__category:first-of-type {
 
 @media (max-width: 500px) {
   .popup {
-    height: 100%;
+    padding: 20px;
+    height: auto;
+  }
+  .popup__container {
+    margin: 0;
   }
   .popup__wrap {
     padding: 20px 0 25px;
@@ -832,6 +840,9 @@ label.popup__category:first-of-type {
   }
   .favorite-devices__card:last-child {
     margin-right: 20px;
+  }
+  .between-wrapper {
+    margin: 0 20px;
   }
   .between-wrapper_margin_on {
     margin: 0 20px;
