@@ -69,12 +69,16 @@ a {
       grid-template-rows: 92px auto auto 64px;
 }
 
+.burger {
+  display: none;
+}
+
 .header {
   grid-column: 1 / -1;
   border-bottom: 1px solid #F0F0F0;
 }
 
-.header__menu {
+.header__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,5 +481,10 @@ input[type="checkbox"]:checked + label {
   font-size: 1.2rem;
   color: #858585;
   margin-right: 36px;
+}
+
+.modal-open {
+  overflow: hidden;
+  position: fixed;
 }
 /*# sourceMappingURL=style.css.map */

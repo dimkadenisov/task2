@@ -52,13 +52,15 @@ a
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-template-rows: 92px auto auto 64px
 
+.burger 
+    display: none
+
 .header
     @extend %header-footer-pre-options
     grid-column: 1 / -1
-    // height: 92px
     border-bottom: 1px solid $lightgray
 
-    &__menu
+    &__wrap
         display: flex
         flex-direction: row
 
@@ -335,3 +337,7 @@ input[type="checkbox"]:checked + label
         font-size: 1.2rem
         color: $gray
         margin-right: 36px
+
+.modal-open 
+    overflow: hidden
+    position: fixed

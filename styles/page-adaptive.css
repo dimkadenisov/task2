@@ -12,6 +12,30 @@
     border-bottom: none;
     padding: 0 20px;
   }
+  .header__menu {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .header__link {
+    margin: 10px 0;
+  }
+  .header__link:nth-child(1), .header__link:nth-child(2) {
+    margin: 10px 0;
+  }
   .main {
     margin: 0 20px;
   }

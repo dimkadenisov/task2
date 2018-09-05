@@ -1,3 +1,7 @@
+//-----------------------------
+// arrows button scroll scripts
+//-----------------------------
+
 const scroll = (elem, toRight) => () => {
   toRight ? elem.scrollLeft+=(elem.clientWidth+9) : elem.scrollLeft-=(elem.clientWidth+9);
 };
@@ -17,10 +21,12 @@ const addArrows = (containerId, arrowsId) => {
 addArrows("scrollContainer1", "arrows1");
 addArrows("scrollContainer2", "arrows2");
 
+//--------------
 //slider scripts
+//--------------
 
-let slider = document.getElementById("range");
-let output = document.getElementById("temp");
+let slider = document.getElementById("range"),
+    output = document.getElementById("temp");
 
 slider.oninput = function() {
   if (this.value > 0) {
@@ -29,24 +35,45 @@ slider.oninput = function() {
   else output.innerHTML = this.value;
 }
 
-let isOpened = false
-let popup = document.getElementsByClassName("popup")[0];
+//-------------
+//popup scripts
+//-------------
 
-const togglePopUp = () => {
-  if (isOpened) {
-    popup.classList.add('hide');
-    isOpened = false;
-  }
-  else {
-    popup.classList.remove('hide');
-    isOpened = true;
-  }
-}
-
-let card = document.getElementsByClassName("card");
+let isOpened = false,
+    popup = document.getElementsByClassName("popup")[0],
+    card = document.getElementsByClassName("card");
 
 for (var i = 0; i < card.length; i++) {
-  card[i].addEventListener("click", togglePopUp);
+  card[i].addEventListener("click", () => popup.classList.toggle('hide'))
+  document.body.classList.add("modal-open")  //new
+  popup.scrollTo = 0
 }
 
-document.getElementById("close").addEventListener("click", togglePopUp);
+document.getElementById("close").addEventListener("click", () => {
+  popup.classList.toggle('hide')
+  document.body.classList.remove("modal-open")  //new
+});
+
+//-----------------
+//side menu scripts
+//-----------------
+
+let burger = document.getElementsByClassName("burger")[0],
+    wrap = document.getElementsByClassName("header__wrap")[0],
+    menu = document.getElementsByClassName("header__menu")[0],
+    isMenuOpened = false;
+
+burger.addEventListener("click", () => {
+  wrap.style.width = "250px"
+  menu.style.width = "100vw"
+  isMenuOpened = true
+  document.body.classList.add("modal-open")
+});
+
+menu.addEventListener("click", () => {
+  if(isMenuOpened){
+    wrap.style.width = "0"
+    menu.style.width = "0"
+    document.body.classList.remove("modal-open")
+  }
+});

@@ -1,6 +1,8 @@
 .popup {
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   z-index: 10;
   display: -webkit-box;
@@ -12,12 +14,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: rgba(51, 51, 51, 0.5);
-  padding: 20px 0;
+  overflow: hidden;
 }
 
 .popup__container {
