@@ -250,16 +250,9 @@ a {
 }
 
 .filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
   padding: 0;
   -webkit-overflow-scrolling: touch;
 }
@@ -269,9 +262,7 @@ a {
 }
 
 .filter__category {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  display: inline-block;
   color: #000000;
   font-size: 1.3rem;
   line-height: 1.5rem;

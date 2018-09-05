@@ -9,6 +9,10 @@
     padding: 20px 0 25px;
     max-width: 370px;
   }
+  .popup__body, .popup__p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .popup__h1 {
     font-size: 1.8rem;
     line-height: 2.1rem;
@@ -55,6 +59,10 @@
   }
   .popup__cont, .popup__cont * {
     display: none;
+  }
+  margin-left: 20px;
+  label.popup__category:last-of-type {
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=popup-adaptive.css.map */

@@ -181,10 +181,9 @@ a
         margin: 0
 
 .filter
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    overflow-x: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    white-space: nowrap
     padding: 0
     -webkit-overflow-scrolling: touch
 
@@ -192,7 +191,7 @@ a
         display: none
 
     &__category
-        flex: 0 0 auto
+        display: inline-block
         color: $total-black
         font-size: 1.3rem
         line-height: 1.5rem
