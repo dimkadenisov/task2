@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,27 +19,18 @@
         </div>
         <p class="p popup__p">Включено</p>
         <div class="filter popup__filter">
-            <input type="checkbox" name="all" value="all" id="all" checked />
-            <label class="filter__category popup__category" for="all">Все</label>
-            <input type="checkbox" name="kitchen" value="kitchen" id="kitchen" />
-            <label class="filter__category popup__category" for="kitchen">Кухня</label>
-            <input type="checkbox" name="hall" value="hall" id="hall" />
-            <label class="filter__category popup__category" for="hall">Зал</label>
-            <input type="checkbox" name="lights" value="lights" id="lights" />
-            <label class="filter__category popup__category" for="lights">Лампочки</label>
-            <input type="checkbox" name="cameras" value="cameras" id="cameras" />
-            <label class="filter__category popup__category" for="cameras">Камеры</label>
-            
-            <input type="checkbox" name="1" value="1" id="1" checked />
-            <label class="filter__category popup__category" for="1">qwqweq</label>
-            <input type="checkbox" name="2" value="2" id="2" />
-            <label class="filter__category popup__category" for="2">1qwseqw</label>
-            <input type="checkbox" name="3" value="3" id="3" />
-            <label class="filter__category popup__category" for="3">qwdqwdas</label>
-            <input type="checkbox" name="4" value="4" id="4" />
-            <label class="filter__category popup__category" for="4">sdva</label>
-            <input type="checkbox" name="5" value="5" id="5" />
-            <label class="filter__category popup__category" for="5">dfs</label>
+            <ul class="filter__list popup__list">
+                <li class="filter__category popup__category filter__category_active">Все</li>
+                <li class="filter__category popup__category">Кухня</li>
+                <li class="filter__category popup__category">Зал</li>
+                <li class="filter__category popup__category">Лампочки</li>
+                <li class="filter__category popup__category">Камеры</li>
+                <li class="filter__category popup__category filter__category_active">Все</li>
+                <li class="filter__category popup__category">Кухня</li>
+                <li class="filter__category popup__category">Зал</li>
+                <li class="filter__category popup__category">Лампочки</li>
+                <li class="filter__category popup__category">Камеры</li>
+            </ul>
         </div>
         <div class="popup__range-container">
           <span class="popup__pre">-10</span>
@@ -53,6 +44,5 @@
       </div>
     </div>
   </div>
-  <script src="../js/slider.js" defer></script>
 </body>
 </html>

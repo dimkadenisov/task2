@@ -65,4 +65,9 @@
     margin-right: 20px;
   }
 }
+
+.hide, .hide * {
+  display: none;
+  position: absolute;
+}
 /*# sourceMappingURL=popup-adaptive.css.map */

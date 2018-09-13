@@ -41,17 +41,19 @@ slider.oninput = function() {
 
 let isOpened = false,
     popup = document.getElementsByClassName("popup")[0],
-    card = document.getElementsByClassName("card");
+    cards = document.getElementsByClassName("card");
 
-for (var i = 0; i < card.length; i++) {
-  card[i].addEventListener("click", () => popup.classList.toggle('hide'))
-  document.body.classList.add("modal-open")  //new
-  popup.scrollTo = 0
-}
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("click", () => {
+    popup.classList.toggle("hide");
+    document.body.classList.add("modal-open");
+    popup.scrollTo = 0;
+  });
+};
 
 document.getElementById("close").addEventListener("click", () => {
-  popup.classList.toggle('hide')
-  document.body.classList.remove("modal-open")  //new
+  popup.classList.toggle('hide');
+  document.body.classList.remove("modal-open");  
 });
 
 //-----------------
@@ -64,16 +66,56 @@ let burger = document.getElementsByClassName("burger")[0],
     isMenuOpened = false;
 
 burger.addEventListener("click", () => {
-  wrap.style.width = "250px"
-  menu.style.width = "100vw"
-  isMenuOpened = true
-  document.body.classList.add("modal-open")
+  wrap.style.width = "250px";
+  menu.style.width = "100vw";
+  isMenuOpened = true;
+  document.body.classList.add("modal-open");
 });
 
 menu.addEventListener("click", () => {
   if(isMenuOpened){
-    wrap.style.width = "0"
-    menu.style.width = "0"
-    document.body.classList.remove("modal-open")
+    wrap.style.width = "0";
+    menu.style.width = "0";
+    document.body.classList.remove("modal-open");
   }
 });
+
+//--------------
+//filter scripts
+//--------------
+
+
+let filterText = document.getElementById("filter-text"),
+    categories = document.getElementsByClassName("filter__category"),
+    activeCategorie = document.querySelector(".favorite-devices__dropdown"),
+    list = document.querySelector(".favorite-devices__filter");
+
+for (let j = 0; j < categories.length; j++) {
+  categories[j].addEventListener("click", () => filterText.innerHTML = categories[j].innerHTML)
+  categories[j].addEventListener("click", () => {
+    for (let k = 0; k < categories.length; k++) {
+      categories[k].classList.remove("filter__category_active");
+    }
+    categories[j].classList.toggle("filter__category_active")
+  })
+}
+
+activeCategorie.addEventListener("click", () => {
+  document.querySelector(".favorite-devices__h2").classList.add("hide");
+  document.querySelector(".between-wrapper_margin_on").style.margin = "0";
+  list.classList.remove("hide");
+  activeCategorie.classList.add("hide");
+
+});
+
+if (window.matchMedia('(max-width: 425px)').matches) {
+  list.classList.add("hide");
+  for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener("click", () => {
+      list.classList.add("hide");
+      activeCategorie.classList.remove("hide");
+      document.querySelector(".favorite-devices__h2").classList.remove("hide");
+      document.querySelector(".between-wrapper_margin_on").style.margin = "0 20px";
+    });
+  };
+};

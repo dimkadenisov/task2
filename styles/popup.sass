@@ -54,6 +54,17 @@
     flex-basis: 100px
     padding-left: 20px
 
+  &__filter
+    margin: 20px 0 25px 0
+
+  &__category
+
+    &:first-child
+      margin-left: 25px
+
+    &:last-child
+      margin-right: 25px
+
   &__range-container
     display: flex
     flex-direction: row
@@ -132,23 +143,3 @@
 
   &:hover
     background-color: $yellow-hovered
-
-.popup__category:first-child
-  margin-left: 0
-
-.popup__filter
-  margin: 20px 0 25px 0
-
-  &__category
-    display: inline
-
-label.popup__category:first-of-type
-  margin-left: 25px
-
-label.popup__category:last-of-type
-  margin-right: 25px
-
-.hide, .hide *
-  display: none
-  position: absolute
-  
