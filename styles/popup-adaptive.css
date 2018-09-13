@@ -60,10 +60,6 @@
   .popup__cont, .popup__cont * {
     display: none;
   }
-  margin-left: 20px;
-  label.popup__category:last-of-type {
-    margin-right: 20px;
-  }
 }
 
 .hide, .hide * {
